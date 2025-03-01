@@ -6,7 +6,7 @@ import apiRequest from '../../lib/apiRequest';
 const Home = () => {
   useEffect(()=>{
     const fetch = async()=>{
-    const message =  await apiRequest.get('/message')
+    const message =   apiRequest.get('/message')
     console.log(message)
 
     }

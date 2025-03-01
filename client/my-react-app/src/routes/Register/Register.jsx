@@ -22,10 +22,11 @@ const Register = () => {
                 email,
                 username, 
                 password
-            })   
+            })
+            navigate('/login') 
             setMessage(res.data.message)
             
-            navigate('/login')
+            
             console.log(res.data.message)
         } catch (error) {
             setError(error.response.data.message)
