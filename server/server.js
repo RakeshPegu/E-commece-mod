@@ -19,7 +19,7 @@ app.use(cookieParser());
 app.use(cors({ origin: process.env.CLIENT_URL, credentials: true }));
 
 // Serve static frontend files
-if(process.env.NODE_ENV){
+if(process.env.NODE_ENV === 'production'){
     const root = path.join(__dirname, 'client', 'my-react-app', 'dist');
     app.use(express.static(root));
     app.get('*', (req, res)=>{
