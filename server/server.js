@@ -28,7 +28,7 @@ mongoose.connect(process.env.DATABASE_URL)
   .then(() => console.log('MongoDB connected successfully'))
   .catch((err) => console.error('MongoDB connection error:', err));
 
-app.get('/api', (req, res) => {
+app.get('/api/message', (req, res) => {
   res.status(200).json({ message: "The backend has been connected" });
 });
 

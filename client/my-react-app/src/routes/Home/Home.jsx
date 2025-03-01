@@ -1,9 +1,19 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './home.scss';
 import { Link, useNavigate } from 'react-router-dom';
+import apiRequest from '../../lib/apiRequest';
 
 const Home = () => {
+  useEffect(()=>{
+    const fetch = async()=>{
+    const message =  await apiRequest.get('/message')
+    console.log(message)
+
+    }
+    fetch()
+  }, [])
   
+  const message = await
   return (
     <div className="home">
        
