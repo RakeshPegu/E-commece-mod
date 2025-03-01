@@ -13,12 +13,12 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT || 5000;
 
-
+const __dirname = path.resolve()
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({ origin: process.env.CLIENT_URL, credentials: true }));
 
-
+console.log(__dirname)
 if(process.env.NODE_ENV === 'production'){
     const root = path.join('client', 'my-react-app', 'dist')
     app.use(express.static(root))
