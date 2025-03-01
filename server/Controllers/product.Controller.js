@@ -1,4 +1,4 @@
-import { Product, User } from "../lib/db.js"
+import { Product } from "../lib/db.js"
 
 
 export const createProduct = async(req, res)=>{

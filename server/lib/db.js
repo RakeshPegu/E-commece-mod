@@ -1,4 +1,4 @@
-import { Role } from '@prisma/client'
+
 import mongoose, { Model, Types } from 'mongoose'
 const userSchema = new mongoose.Schema({
     username: {
