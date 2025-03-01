@@ -5,7 +5,7 @@ import productRoute from './routes/product.js';
 import userRoute from './routes/user.js';
 import cors from 'cors';
 import mongoose from 'mongoose';
-import path from 'path';
+
 import dotenv from 'dotenv';
 
 dotenv.config();
@@ -18,15 +18,8 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(cors({ origin: process.env.CLIENT_URL, credentials: true }));
 
-console.log(process.env.NODE_ENV)
-if(process.env.NODE_ENV === 'production'){
-   
-    app.use(express.static('client/my-react-app/dist'))
-    app.get('*', (req, res)=>{
-        res.sendFile(path.resolve(__dirname, 'client', 'my-react-app', 'dist', 'index.html'))
-    })
 
-}
+
 app.use('/api/auth', authRoute);
 app.use('/api/products', productRoute);
 app.use('/api/user', userRoute);
