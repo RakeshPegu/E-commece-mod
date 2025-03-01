@@ -19,8 +19,13 @@ app.use(cookieParser());
 app.use(cors({ origin: process.env.CLIENT_URL, credentials: true }));
 
 // Serve static frontend files
-const clientPath = path.join(__dirname, 'client', 'my-react-app', 'dist');
-app.use(express.static(clientPath));
+if(process.env.NODE_ENV){
+    const root = path.join(__dirname, 'client', 'my-react-app', 'dist');
+    app.use(express.static(root));
+    app.get('*', (req, res)=>{
+        res.sendFile('index.html', {root})
+    })
+}
 
 app.use('/api/auth', authRoute);
 app.use('/api/products', productRoute);
@@ -35,10 +40,6 @@ app.get('/api', (req, res) => {
 });
 
 // Catch-all route for frontend
-app.get('*', (req, res) => {
-    console.log(`Serving index.html for request: ${req.url}`);
-    res.sendFile(path.join(clientPath, 'index.html'));
-});
 
 app.listen(port, () => {
   console.log(`The server is listening on port ${port}`);
