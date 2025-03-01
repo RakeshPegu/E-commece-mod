@@ -24,8 +24,7 @@ const Register = () => {
                 password
             })
             navigate('/login') 
-            setMessage(res.data.message)
-            
+            setMessage(res.data.message)          
             
             console.log(res.data.message)
         } catch (error) {
