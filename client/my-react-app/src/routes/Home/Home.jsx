@@ -6,14 +6,14 @@ import apiRequest from '../../lib/apiRequest';
 const Home = () => {
   useEffect(()=>{
     const fetch = async()=>{
-    const message =   apiRequest.get('/message')
+    const message = await apiRequest.get('/message')
     console.log(message)
 
     }
     fetch()
   }, [])
   
-  const message = await
+  
   return (
     <div className="home">
        
