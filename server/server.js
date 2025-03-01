@@ -16,7 +16,7 @@ app.use(express.json())
 app.use(cookieParser())
 app.use(cors({origin: process.env.CLIENT_URL , credentials:true}))
 // serve static files from vite's build folder
-app.use(express.static(path.join(__dirname, 'client', 'dist')))
+app.use(express.static(path.join(__dirname, 'client','my-react-app', 'dist')))
 app.use('/api/auth', authRoute )
 app.use('/api/products',productRoute)
 
@@ -39,7 +39,7 @@ app.get('/api', async(req , res)=>{
 })
 // catch-all route : Redirect all frontend request to 'index.html
 app.get('*', (req , res)=>{
-    res.sendFile(path.join(__dirname, 'client', 'dist', 'index.html'))
+    res.sendFile(path.join(__dirname, 'client','my-react-app', 'dist', 'index.html'))
 })
 app.listen(port, ()=>{
     console.log(`the server is listening on port ${port}`)
