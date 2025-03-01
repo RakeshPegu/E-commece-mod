@@ -16,16 +16,14 @@ app.use('/api/auth', authRoute )
 app.use('/api/products',productRoute)
 
 app.use('/api/user',userRoute)
-mongoose.connect(process.env.DATABASE_URL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-}).then(()=>{
-    console.log('mongodb Connected')
-
-}).catch(err=>{
+mongoose.connect(process.env.DATABASE_URL).then(()=>{
+    console.log('mongodb connectd successfully')
+   
+}).catch((err)=>{
     console.log(err)
 })
 app.listen(port, ()=>{
     console.log(`the server is listening on port ${port}`)
 
-})
+})  
+   
