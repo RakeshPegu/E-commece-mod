@@ -1,0 +1,78 @@
+.profilePage{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    
+
+    .top{
+        
+        flex: 1;
+        background-image: url('../background.jpg');
+        background-size: cover;
+        background-position: center;
+        opacity: 1;
+        .imgContainer{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            img{
+                border-radius: 100%;
+                cursor: pointer;
+                
+            }
+        }
+
+    }
+    .bottom{
+       
+        flex: 2;
+        .button{
+            
+            height: 100%;
+            display: flex;
+            justify-content: center;   
+            gap: 100px;  
+         
+
+            button{
+                cursor: pointer;
+                width: 100px;
+                height: 50px;
+                
+                background-color: rgb(105, 117, 117);
+                border: none;
+                border-radius: 50px;
+                transition: all .3s ease;
+                margin-top: 20px;
+                &:hover{
+                    background-color: aqua;
+                }
+            }
+            
+        }
+        h2{
+           
+            margin-left: 15px;
+        }
+        .info{
+            
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            
+            div{
+                border-bottom: 1px black solid;
+                display: flex;
+                flex-direction: row;
+                
+                margin-left: 20px;
+             
+               
+               
+            }
+            
+        }
+
+    }
+}

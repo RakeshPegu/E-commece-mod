@@ -1,0 +1,67 @@
+.home{
+    background-color: rgb(162, 158, 158);
+    height: 100vh;
+    display: flex;
+     
+    flex-direction: row;
+    .left{
+        height: 100vh;        
+        flex: 1;
+        display: flex;
+        justify-content: center;   
+       
+        marquee{
+            font-size: 1.3em;
+        }
+       
+        h1{
+            
+            margin-top: 150px;
+            font-size: 2.70em;
+            text-align: center;
+            }
+        h2{
+            margin-left: 100px;
+            font-size: 1.5em;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        .btn{
+            
+            text-align: center;
+            margin-top: 70px;
+            button{
+                background: orangered;
+                width: 200px;
+                height: 50px;
+                border: none;
+                font-size: 1.2em;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: all .3s ease;
+                &:hover{
+                    box-shadow: 8px 10px rgb(21, 21, 21);
+                }
+            }
+
+
+        }
+    }
+    .right{
+        flex: .70;        
+        height: 100vh; 
+        .imageContainer{
+             display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            img{
+                opacity: 1;
+            }
+        }
+
+       
+    }
+
+
+
+}

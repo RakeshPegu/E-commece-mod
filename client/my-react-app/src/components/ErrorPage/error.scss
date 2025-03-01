@@ -1,0 +1,13 @@
+body{
+    overflow-y: hidden;
+    .error{
+        display: flex;
+        align-items: center;   
+        flex-direction: column;
+        height: 100vh;
+        justify-content: center;
+        p{
+            font-size: 1.3em;
+        }
+    }
+}
