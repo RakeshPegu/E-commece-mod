@@ -55,6 +55,7 @@ const Profile = () => {
     const {currentUser} = useContext(AuthContext);
     
     console.log(currentUser.role)
+    console.log(currentUser._id)
     
   return (
     <div className="profile">
@@ -76,8 +77,8 @@ const Profile = () => {
             <div className="box2">
             <div className="icon"> <FontAwesomeIcon icon="fa-solid fa-user" /><h3> ACCOUNT SETTINGS</h3></div>
                 <ul>
-                    <li ><a href={`/profile/${currentUser.id}`}  >profile information</a></li>
-                    <li ><a href={`/profile/${currentUser.id}/manage_address`}>manage address</a></li>
+                    <li ><a href={`/profile/${currentUser._id}`}  >profile information</a></li>
+                    <li ><a href={`/profile/${currentUser._id}/manage_address`}>manage address</a></li>
                     <li ><a>Other information</a></li>
                 </ul>
             </div>
