@@ -51,7 +51,7 @@ export const login = async(req,res)=>{
         }, process.env.JWT_SECRECT_KEY, {expiresIn: age})
         return res.cookie('token', token, {
             httpOnly:true,
-            secure:process.env.NODE_ENV === 'production',
+            secure:true,
             sameSite:'strict',
             maxAge:age
         }).json(user)
@@ -65,7 +65,7 @@ export const logout = async(req, res)=>{
     try {
         res.clearCookie('token' ,{
             httpOnly: true,
-            secure: process.env.NODE_ENV === 'production',
+            secure: true,
             sameSite: 'strict'
         }).json({message:"Logged out successfully"})
         
