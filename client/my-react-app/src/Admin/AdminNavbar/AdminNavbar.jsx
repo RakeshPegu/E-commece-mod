@@ -14,10 +14,10 @@ const AdminNavbar = () => {
           </div>
         </div>
         <div className="right">
-            right
+            right 
         </div>
     </nav>
   );
 };
 
-export default AdminNavbar;
+export default AdminNavbar;  

@@ -30,7 +30,7 @@ const RequiredAuthentication = ()=>{
     }else if(currentUser.role === 'ADMIN'){
       navigate('/admin')
     }
-  },[currentUser, navigate, []])
+  },[currentUser, navigate, ])
   if(!currentUser || currentUser.role === 'ADMIN'){   
     return null
   }
