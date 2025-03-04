@@ -4,6 +4,7 @@ import { Outlet, useNavigate } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar';
 import { AuthContext } from '../Context/Context';
 import AdminNavbar from '../../Admin/AdminNavbar/AdminNavbar';
+import Footer from '../Footer/Footer';
 
 const Layout = () => {
   return (
@@ -15,7 +16,7 @@ const Layout = () => {
         <Outlet/>
       </div>
       <div className="foot">
-        this is footbar
+        <Footer/>
       </div>
     </div>
   );
@@ -42,7 +43,7 @@ const RequiredAuthentication = ()=>{
         <Outlet/>
       </div>
       <div className="foot">
-        this is footbar
+        <Footer/>
       </div>
     </div>);
     
@@ -70,7 +71,7 @@ const RequiredAdmin = ()=>{
         <Outlet/>
       </div>
       <div className="foot">
-        this is footbar
+        <Footer/>
       </div>
     </div>
 
