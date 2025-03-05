@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faXTwitter, faLinkedin, faSquareFacebook, faSquareInstagram } from '@fortawesome/free-brands-svg-icons';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faS, fas } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 library.add(fas, faS, faSquareFacebook, faLinkedin, faXTwitter, faSquareInstagram)
 const Footer = () => {
@@ -47,10 +48,11 @@ const Footer = () => {
          </div>
        
          <div className="logo">
-         <FontAwesomeIcon icon="fa-brands fa-linkedin" />
-         <FontAwesomeIcon icon="fa-brands fa-square-facebook" />
-         <FontAwesomeIcon icon="fa-brands fa-x-twitter" />
-         <FontAwesomeIcon icon="fa-brands fa-square-instagram" />
+         <Link to='#'><FontAwesomeIcon icon="fa-brands fa-linkedin" /></Link> 
+         <Link to='#' ><FontAwesomeIcon icon="fa-brands fa-square-facebook" /></Link>
+         <Link to='#' ><FontAwesomeIcon icon="fa-brands fa-x-twitter" /></Link>
+         <Link to='#'><FontAwesomeIcon icon="fa-brands fa-square-instagram" /></Link>
+         
 
          </div>
          

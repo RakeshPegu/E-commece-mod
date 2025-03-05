@@ -1,0 +1,139 @@
+.manageAddress{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(212, 209, 202);
+    height: 111.5vh;
+   
+    h1{
+        text-align: center;
+    }
+    .content{
+        
+        width: 100%;
+        height: 100vh;
+       
+        form{
+            
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+           
+            input{
+                &:active{
+                    border: .4px solid black;
+                }
+            }
+            
+            gap: 20px;
+            .name{
+                display: flex;
+                flex-direction: row;
+                gap: 0px 200px;
+                justify-content: space-around;
+                input{
+                    width: 400px;
+                    padding: 10px;
+                }
+                .firstname{
+                    display: flex;
+                    flex-direction: column;
+                   
+
+                }
+                .lastname{
+                    display: flex;
+                    flex-direction: column;
+
+                }
+            }
+            .shipping{
+                display: flex;
+                flex-direction: column;
+                
+                
+                label{
+                    margin-left: 10px;
+                }
+                input{
+                    padding: 10px;
+                    width: 95%;
+                    margin-left: 10px;
+                }
+            }
+            .adr{
+                display: flex;
+                flex-direction: row;
+                gap: 0px 200px;
+                justify-content: space-around;
+                input{
+                    padding: 10px;
+                    width: 400px;
+                }
+                .city{
+                    display: flex;
+                    flex-direction: column;
+
+                }
+                .state{
+                    display: flex;
+                    flex-direction: column;
+                }
+                
+            }
+            .number{
+                
+                display: flex;
+                flex-direction: row;
+                gap: 0px 200px;
+                justify-content: space-around;
+                input{
+                    padding: 10px;
+                    width: 400px;
+                }
+                .phone{
+                    display: flex;
+                    flex-direction: column;
+
+                }
+                .code{
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+            .btn{                
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+                margin-top: 30px;
+                button{
+                    margin-right: 50px;
+                    height: 50px;
+                    width: 200px;
+                    cursor: pointer;
+                    font-size: 1.3em;
+                    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                    background-color: orange;
+                    border: none;
+                    transition: all .4s  ease;
+                    &:hover{
+                        box-shadow: 8px 10px  black;
+                    }
+                }
+            }
+            .land{
+                display: flex;
+                flex-direction: column;
+                label{
+                    margin-left: 10px;
+                }
+                input{
+                    padding: 10px;
+                    width: 95%;
+                    margin-left: 10px;
+                }
+            }
+            
+        }
+    }
+}
