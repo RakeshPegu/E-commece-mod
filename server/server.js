@@ -5,7 +5,7 @@ import productRoute from './routes/product.js';
 import userRoute from './routes/user.js';
 import cors from 'cors';
 import mongoose from 'mongoose';
-
+import addressRoute from './routes/addressRoute.js'
 import dotenv from 'dotenv';
 
 dotenv.config();
@@ -23,6 +23,7 @@ app.use(cors({ origin: process.env.CLIENT_URL, credentials: true }));
 app.use('/api/auth', authRoute);
 app.use('/api/products', productRoute);
 app.use('/api/user', userRoute);
+app.use('/api/address',addressRoute)
 
 mongoose.connect(process.env.DATABASE_URL)
   .then(() => console.log('MongoDB connected successfully'))

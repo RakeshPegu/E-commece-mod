@@ -4,7 +4,8 @@ export const getUser = async(req, res)=>{
     const tokenUserId = req.userId
     const userId = req.params.id
     try {
-        if(tokenUserId.toString() !== userId.toString()){
+        
+        if(tokenUserId !== userId){
             return res.status(401).json({message:"you're not allowed"})
         }
         const user = await User.findById (tokenUserId)

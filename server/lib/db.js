@@ -24,14 +24,20 @@ const userSchema = new mongoose.Schema({
 
 
     },
-    createdAt :{ 
+
+    
+    createdAt :{    
         type : Date,
         default:  Date.now
     },
-    products :[
+      
+    addressIDs: [{
+        type:Types.ObjectId, ref:"Address"
+    }],
+    productIDs :[
         {
             type: Types.ObjectId, ref :"Product",
-            required: true
+            
     
     
         }
@@ -65,6 +71,55 @@ const productSchema = new mongoose.Schema({
         default: Date.now
     }
 })
+const addressSchema = new mongoose.Schema( {
+    firstName:{
+        type: String,
+        required: true        
+    },
+    lastName : {
+        type: String,
+        required: true
+    },
+    shippingAddress: {
+        type: String,
+        required: true
+    },
+    city :{
+        type: String,
+        required: true
+    },
+    state :{
+        type: String,
+        required: true
+    },
+    phoneNumber : {
+        type: String,
+        required:true
+
+    },
+    zipCode :{
+        type : String,
+        required: true
+    }, 
+    landMark: {
+        type : String,
+        
+    },
+    authorId :{
+        type : Types.ObjectId, ref: "User",
+        required: true,
+        unique:  false
+        
+
+    },
+    createdAt: {
+        type : Date,
+        default: Date.now
+    }
+    
+
+})
 const User = mongoose.model('User', userSchema)
 const Product = mongoose.model('Product', productSchema)
-export {User, Product}
+const Address = mongoose.model('Address', addressSchema)
+export {User, Product, Address}
