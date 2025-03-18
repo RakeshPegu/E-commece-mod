@@ -77,9 +77,9 @@ const Profile = () => {
             <div className="box2">
             <div className="icon"> <FontAwesomeIcon icon="fa-solid fa-user" /><h3> ACCOUNT SETTINGS</h3></div>
                 <ul>
-                    <li ><a href={`/profile/${currentUser._id}`}  >profile information</a></li>
-                    <li ><a href={`/profile/${currentUser._id}/manage_address`}>manage address</a></li>
-                    <li ><a>Other information</a></li>
+                    <li><Link to={`/profile/${currentUser._id}`}>profile information</Link></li>
+                     <li><Link to={`/profile/${currentUser._id}/manage_address`}>manage address</Link></li>
+                    <li ><Link >Other information</Link></li>
                 </ul>
             </div>
             <div className="box3" onClick={handleLogout}>

@@ -13,6 +13,7 @@ import EditPage from './routes/EditPage/EditPage';
 
 import AdminHomepage from './Admin/AdminHomepage/AdminHomepage';
 import Shop from './routes/Shop/Shop';
+import { addressLoader } from './lib/loader';
 
 
 const route = createBrowserRouter([
@@ -60,6 +61,7 @@ const route = createBrowserRouter([
       {
         path: "/profile/:userId",
         element: <Profile/>,
+       
         children :[
           {
             path:"",

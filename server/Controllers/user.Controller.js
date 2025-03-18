@@ -23,14 +23,14 @@ export const deleteUser = async(req, res)=>{
   
 
     try {
-        console.log("this is first")
+        
         if(tokenUserId.toString() !== userId.toString()){
             return res.status(203).json({message:"You're not authorized to change the user info"})
         }
         
         // delete the user
         await User.findByIdAndDelete (userId)
-        console.log('done')
+       
         res.status(200).json({message:"User has been deleted successfully"})
 
         

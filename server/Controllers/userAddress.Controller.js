@@ -39,6 +39,7 @@ export const createAddress = async(req, res)=>{
         
     } catch (error) {
         res.status(500).json({message:'Something went wrong this is some created'})
+        console.log(error)
         
     }
 }
@@ -59,12 +60,12 @@ export const getAddresses = async(req, res)=>{
 export const getAddress = async(req, res)=>{
     const tokenUserId = req.userId
     const addressId = req.params.id
+    console.log(addressId)
     try {
-        const user = await User.findById(tokenUserId)
-        if(user.role !== 'ADMIN' || tokenUserId !== user.addressId.include(authorId)){
-            return res.status(403).json({message:"You're not allowed"})
-        }
         const address = await Address.findById(addressId)
+        
+       
+        console.log(address)
         res.status(200).json(address)
 
         
